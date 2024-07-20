@@ -1,0 +1,28 @@
+<!-- src/app/components/appointment/appointment.component.html -->
+
+<div>
+  <div class="appointment-form">
+    <h3 class="form-text">Enter appointment Details</h3>
+    <br>
+    <div>Today's date : {{today | date:'shortDate'}}</div>
+    <div>Current time : {{today | date:'mediumTime'}}</div>
+    <div>Enter patient_Id : <input type="number" [(ngModel)]="patientid"></div>
+    <div>Enter doctor_Id : <input type="number" [(ngModel)]="doctorid"></div>
+    <!-- <div>Enter appointment_date : <input type="date" [(ngModel)]="appointmentdate"><div> -->
+    <!-- <div>Enter appointment_time : <input type="time" [(ngModel)]="appointmenttime"></div> -->
+    <div>Status(Scheduled/not) : <input type="text" [(ngModel)]="status"></div>
+    <button (click)="createAppointment()">Add Appointment</button>
+  </div>
+    <h2>Appointments</h2>
+    <ul>
+      <li *ngFor="let appointment of appointments">
+        Patient ID: {{ appointment.patientId }} | Doctor ID: {{ appointment.doctorId }} | Date: {{ appointment.appointmentDate }} | Time: {{ appointment.appointmentTime }}
+        <button (click)="deleteAppointment(appointment.id)">Delete</button>
+      </li>
+    </ul>
+    <!-- <div>
+      <span><input type="text" placeholder=""></span>
+    </div> -->
+    
+  </div>
+  

@@ -1,0 +1,19 @@
+<!-- src/app/components/medical-record/medical-record.component.html -->
+
+<div>
+  <div class="medicalrecord-form">
+    <h3 class="form-text">Enter  medical record</h3>
+    <br>
+    <div>Enter patient id : <input type="text" [(ngModel)]="mrpatientId"></div>
+    <div>Enter description : <input type="text" [(ngModel)]="mrdescription"></div>
+    <button (click)="createMedicalRecord()">Add Medical Record</button>
+  </div>
+    <h2>Medical Records</h2>
+    <ul>
+      <li *ngFor="let medicalRecord of medicalRecords">
+        Patient ID: {{ medicalRecord.patientId }} | Description: {{ medicalRecord.description }}
+        <button (click)="deleteMedicalRecord(medicalRecord.id)">Delete</button>
+      </li>
+    </ul>
+</div>
+  

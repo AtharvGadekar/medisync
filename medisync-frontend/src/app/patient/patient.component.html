@@ -1,0 +1,20 @@
+<div class="patients-container">
+  <div class="patient-form">
+    <h3 class="form-text">Enter Patients Details</h3>
+    <br>
+    <div>Enter patient's name : <input type="text" [(ngModel)]="pname"></div>
+    <div>Enter patient's age : <input type="number" [(ngModel)]="page"></div>
+    <div>Enter patient's gender : <input type="text" [(ngModel)]="pgender"></div>
+    <div>Enter patient's address : <input type="text" [(ngModel)]="paddress"></div>
+    <div>Enter patient's phone : <input type="text" [(ngModel)]="pphone"></div>
+    <div>Enter patient's email : <input type="text" [(ngModel)]="pemail"></div>
+    <button (click)="createPatient()">Add Patient</button>
+  </div>
+    <h2>Patients</h2>
+    <ul>
+      <li *ngFor="let patient of patients">
+        Id : {{patient.id}} | Name : {{ patient.name }} | Age : {{ patient.age }} | Gender : {{ patient.gender }}
+        <button (click)="deletePatient(patient.id)">Delete</button>
+      </li>
+    </ul>
+</div>

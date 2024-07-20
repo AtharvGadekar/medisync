@@ -1,0 +1,22 @@
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 5px 5px;
+    padding-right: 30px;
+    padding-left: 10px;
+}
+ul{
+    padding: 0px 0px;
+    list-style: none;
+    display: flex;
+}
+.navbar a:hover{
+    background-color: burlywood;
+}
+.navbar{
+    padding: 10px 10px;
+    margin: 0px 0px;
+    display: flex;
+    background-color: antiquewhite;
+}

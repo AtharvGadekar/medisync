@@ -1,0 +1,18 @@
+<!-- <app-home></app-home> -->
+<!-- <app-patient></app-patient>
+<app-doctor></app-doctor>
+<app-appointment></app-appointment>
+<app-medical-record></app-medical-record> -->
+
+<div class="navbar">
+    <ul>
+        <li><a [routerLink]="'/home'">Home</a></li>
+        <li><a [routerLink]="'/patients'">Patients</a></li>
+        <li><a [routerLink]="'/doctors'">Doctors</a></li>
+        <li><a [routerLink]="'/appointments'">Appointment</a></li>
+        <li><a [routerLink]="'/medical-records'">Medical records</a></li>
+    </ul>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
